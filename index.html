@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <title><%= htmlWebpackPlugin.options.title %>></title>
+    </head>
+    <body>
+        <header>
+            <img src="<%= require('./src/assets/brand2.png') %>"/>
+            <h1>Local Gutter Contractors</h1>
+        </header>
+        <main>
+            <div data-bind="visible: errMsg" class="snack-bar">
+                <p data-bind="text: errMsg"></p>
+                <button type="button" class="btn-dismiss">&times;</button>
+            </div>
+
+            <ul class="card-container" data-bind="foreach: contractors">
+                <li>
+                    <div class="card" data-bind="attr: {tabindex : ($index() + 3), 'data-website': $data.website ?? ''}">
+                        <div class="card__header">
+                            <h1 class="one-line" data-bind="{text: name, attr: {title: name}}" ></h1>
+                        </div>
+                        <div class="card__content">
+                            <div class="card__indicators" data-bind="if: $data.ratings">
+                                <div class="rating-meter" data-bind="foreach: new Array(5)">
+                                    <!-- ko if: $parent.ratings >= $index() + 1 -->
+                                    <span class="star-full"></span>
+                                    <!-- /ko -->
+                                    <!-- ko ifnot: $parent.ratings >= $index() + 1 -->
+                                    <span class="star-stroke"></span>
+                                    <!-- /ko -->
+                                </div>
+                                <div>
+                                    <span data-bind="text: ratings"></span>
+                                    /
+                                    <span data-bind="text: reviews"></span>
+                                </div>
+                            </div>
+
+                            <div class="icon-label" style="justify-content: end;">
+                                <p class="material-symbols-outlined">call</p>
+                                <p style="font-style: italic;" data-bind="text: phone"></p>
+                            </div>
+                        </div>
+                        <div class="card__footer">
+                            <div data-bind="if: $data.address" class="icon-label">
+                                <p class="material-symbols-outlined">location_on</p>
+                                <p style="flex: 1 1 auto;" data-bind="text: address"></p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </main>
+        <footer>
+            <p>William Brito &copy;2023</p>
+        </footer>
+    </body>
+</html>

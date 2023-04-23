@@ -1,0 +1,39 @@
+[
+    {
+        "name": "Gutterhawk Roofing & Gutter Specialists",
+        "ratings": 4,
+        "reviews": 7,
+        "phone": "(850) 656-4295",
+        "website": "http://www.Gutterhawk.com",
+        "address": "5928 N Monroe St. Tallahassee, FL 32303"
+    },
+    {
+        "name": "Gutter Solutions",
+        "ratings": 3,
+        "reviews": 2,
+        "phone": "(850) 510-5175",
+        "website": "https://www.guttersolutions.net/",
+        "address": "5130 Woodlane Cir 5130 Woodlane Cir"
+    },
+    {
+        "name": "Bradley's Custom Gutters",
+        "phone": "(850) 528-7604"
+    },
+    {
+        "name": "Gutter Shark",
+        "phone": "(850) 566-7024",
+        "website": "https://guttershark.com/residential-gutter-installation/"
+    },
+    {
+        "name": "Hank's Gutter Service",
+        "phone": "(850) 510-7606"
+    },
+    {
+        "name": "Waterhawk Gutters",
+        "ratings": 1,
+        "reviews": 1,
+        "phone": "(850) 562-5111",
+        "website": "http://waterhawkgutters.com/",
+        "address": "4815 Woodlane Cir Suite 100. Tallahassee, FL 32303"
+    }
+]
