@@ -11,6 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     ko.applyBindings(model);
 
+    document.getElementById('frmFilter').addEventListener('submit', evt => {
+        evt.preventDefault();
+    });
+
     Array.from(document.getElementsByClassName('card')).forEach((cardElem :HTMLDivElement) => {    
         cardElem.addEventListener('click', (evt : MouseEvent) => {
             const card :HTMLDivElement = evt.target as HTMLDivElement;

@@ -3,6 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+input {
+    background-color: transparent;
+    border: solid;
+    border-width: 0 0 thin 0;
+    &:focus {
+        outline: none;
+    }
+}
+
 body {
     font-family: sans-serif;
     display: flex;
@@ -11,9 +27,20 @@ body {
 }
 
 header {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1rem;
     padding: 1.2rem 2rem;
     background-color: lightgray;
     box-shadow: 0 2px 6px rgba(0, 0, 0);
+    img.brand {
+        max-height: 4.5rem;
+        flex: 0 0 auto;
+    }
+    h1 {
+        flex: 1 1 auto;
+    }
 }
 
 main {

@@ -7,8 +7,14 @@
     </head>
     <body>
         <header>
-            <img src="<%= require('./src/assets/brand2.png') %>"/>
+            <img class="brand" src="<%= require('./src/assets/brand2.png') %>"/>
             <h1>Local Gutter Contractors</h1>
+            <form id="frmFilter">
+                <fieldset class="decorated-input" title="Filter criteria">
+                    <input type="text" data-bind="value: filter, valueUpdate: 'input'" name="filter"/>
+                    <span class="material-symbols-outlined">filter_alt</span>
+                </fieldset>
+            </form>
         </header>
         <main>
             <div data-bind="visible: errMsg" class="snack-bar">
